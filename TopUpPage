@@ -1,0 +1,108 @@
+class Dmd {
+  String amount;
+  String price;
+
+  Dmd({
+    this.price,
+    this.amount,
+  });
+}
+
+List diamonds = [
+  Dmd(
+    amount: "25 Diamonds",
+    price: "25tk or 100 coin",
+  ),
+  Dmd(
+    amount: "50 Diamonds",
+    price: "50tk or 100 coin",
+  ),
+  Dmd(
+    amount: "100 Diamonds",
+    price: "100tk or 100 coin",
+  ),
+  Dmd(
+    amount: "310 Diamonds",
+    price: "310tk or 100 coin",
+  ),
+  Dmd(
+    amount: "520 Diamonds",
+    price: "520tk or 100 coin",
+  ),
+  Dmd(
+    amount: "1060 Diamonds",
+    price: "1060 tk or 100 coin",
+  ),
+];
+
+import 'package:Dhanda/class.dart';
+import 'package:flutter/material.dart';
+
+class Topup extends StatefulWidget {
+  Topup({Key key}) : super(key: key);
+
+  @override
+  _TopupState createState() => _TopupState();
+}
+
+class _TopupState extends State<Topup> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+        SizedBox(
+          height: 100,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Top up",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
+            ),
+          ],
+        ),
+        Expanded(
+            child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Container(
+            child: GridView.builder(
+              itemCount: diamonds.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 10.0,
+                mainAxisSpacing: 10.0,
+              ),
+              itemBuilder: (BuildContext context, int index) {
+                return Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    side: BorderSide(
+                      color: Colors.grey.withOpacity(0.2),
+                      width: 1,
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ListTile(
+                        title: Center(
+                          child: Text(
+                            diamonds[index].amount,
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        subtitle: Center(child: Text(diamonds[index].price)),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ),
+        ))
+      ]),
+    );
+  }
+}
