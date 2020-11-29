@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import "class-1.dart";
 import 'package:gradient_text/gradient_text.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../../models/topUpPageModels/topMod.dart';
 
-class Ucpurchese extends StatefulWidget {
-  Ucpurchese({Key key}) : super(key: key);
+class Topup extends StatefulWidget {
+  static const String id = 'topUp';
+  Topup({Key key}) : super(key: key);
 
   @override
-  _UcpurcheseState createState() => _UcpurcheseState();
+  _TopupState createState() => _TopupState();
 }
 
-class _UcpurcheseState extends State<Ucpurchese> {
+class _TopupState extends State<Topup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +26,6 @@ class _UcpurcheseState extends State<Ucpurchese> {
             Color(0xff502BA0),
             Color(0xff592C5A),
             Color(0xff25294A),
-            //Color(0xffA8A8d6)
           ],
         )),
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
@@ -36,11 +35,11 @@ class _UcpurcheseState extends State<Ucpurchese> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GradientText("Purchese UC",
+              GradientText("Top Up",
                   gradient: LinearGradient(colors: [
                     Color(0xffFFEFBA),
                     Color(0xffeaafc8),
-                    //Colors.purple,
+                    // Colors.purple,
                     //Colors.pink,
                     //Colors.deepOrange,
                     //Colors.purple
@@ -58,6 +57,7 @@ class _UcpurcheseState extends State<Ucpurchese> {
             padding: const EdgeInsets.all(12.0),
             child: Container(
               child: GridView.builder(
+                physics: BouncingScrollPhysics(),
                 itemCount: diamonds.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
@@ -66,11 +66,11 @@ class _UcpurcheseState extends State<Ucpurchese> {
                 ),
                 itemBuilder: (BuildContext context, int index) {
                   return Card(
-                    elevation: 3.0,
+                    elevation: 10,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                       side: BorderSide(
-                        color: Colors.grey.withOpacity(0.2),
+                        color: Colors.blue.withOpacity(0.9),
                         width: 1,
                       ),
                     ),
@@ -96,7 +96,7 @@ class _UcpurcheseState extends State<Ucpurchese> {
                               child: Text(diamonds[index].amount,
                                   style: GoogleFonts.rambla(
                                     textStyle: TextStyle(
-                                        fontSize: 20, color: Color(0xffF4F4F6)),
+                                        fontSize: 22, color: Color(0xffF4F4F6)),
                                   )),
                             ),
                             subtitle: Row(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:upgradegame/screens/topUpPgae/topUPPage.dart';
 
 import 'package:upgradegame/widgets/homepage/gameList.dart';
 
@@ -39,6 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: GestureDetector(
                 onTap: () {
                   print('Clicked');
+                  Navigator.pushNamed(context, Topup.id);
                 },
                 child: GameList(
                   title: 'Call Of Duty',
@@ -46,8 +48,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     'assets/images/avater/cod2.png',
                     height: 500,
                   ),
-                  bgColor: Colors.pink,
-                  boxShadoColor: Colors.green,
+                  bgColor: Colors.red,
+                  boxShadoColor: Colors.blue,
                 ),
               ),
             ),

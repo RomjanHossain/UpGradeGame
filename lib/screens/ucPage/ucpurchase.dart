@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
-import "class.dart";
-import 'package:gradient_text/gradient_text.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../models/UcPage/class-1.dart';
+import 'package:gradient_text/gradient_text.dart';
 
-class Topup extends StatefulWidget {
-  Topup({Key key}) : super(key: key);
-
+class Ucpurchese extends StatefulWidget {
   @override
-  _TopupState createState() => _TopupState();
+  _UcpurcheseState createState() => _UcpurcheseState();
 }
 
-class _TopupState extends State<Topup> {
+class _UcpurcheseState extends State<Ucpurchese> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,11 +33,11 @@ class _TopupState extends State<Topup> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GradientText("Top Up",
+              GradientText("Purchese UC",
                   gradient: LinearGradient(colors: [
                     Color(0xffFFEFBA),
                     Color(0xffeaafc8),
-                    // Colors.purple,
+                    //Colors.purple,
                     //Colors.pink,
                     //Colors.deepOrange,
                     //Colors.purple
@@ -65,11 +63,11 @@ class _TopupState extends State<Topup> {
                 ),
                 itemBuilder: (BuildContext context, int index) {
                   return Card(
-                    elevation: 10,
+                    elevation: 3.0,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                       side: BorderSide(
-                        color: Colors.blue.withOpacity(0.9),
+                        color: Colors.grey.withOpacity(0.2),
                         width: 1,
                       ),
                     ),
@@ -95,7 +93,7 @@ class _TopupState extends State<Topup> {
                               child: Text(diamonds[index].amount,
                                   style: GoogleFonts.rambla(
                                     textStyle: TextStyle(
-                                        fontSize: 22, color: Color(0xffF4F4F6)),
+                                        fontSize: 20, color: Color(0xffF4F4F6)),
                                   )),
                             ),
                             subtitle: Row(
