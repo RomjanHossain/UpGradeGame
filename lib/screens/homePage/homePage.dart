@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:upgradegame/screens/topUpPgae/topUpPage.dart';
+import 'package:upgradegame/services/Provider/gameDataProvide.dart';
 
 import 'package:upgradegame/widgets/homepage/gameList.dart';
 
@@ -36,6 +38,10 @@ class MyHomePage extends StatelessWidget {
               child: GestureDetector(
                 onTap: () {
                   print('Clicked');
+                  Provider.of<Data>(context, listen: false).gameName =
+                      'Call of Duty';
+                  Provider.of<Data>(context, listen: false).coverPath =
+                      'assets/images/cover/cod.jpg';
                   Navigator.pushNamed(context, Topup.id);
                 },
                 child: GameList(
@@ -50,26 +56,44 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: GameList(
-                title: 'Pubg',
-                img: Image.asset(
-                  'assets/images/avater/pubg2.png',
-                  height: 500,
+              child: GestureDetector(
+                onTap: () {
+                  print('Clicked');
+                  Provider.of<Data>(context, listen: false).gameName = 'PUBG';
+                  Provider.of<Data>(context, listen: false).coverPath =
+                      'assets/images/cover/pubg.jpg';
+                  Navigator.pushNamed(context, Topup.id);
+                },
+                child: GameList(
+                  title: 'Pubg',
+                  img: Image.asset(
+                    'assets/images/avater/pubg2.png',
+                    height: 500,
+                  ),
+                  bgColor: Colors.pink,
+                  boxShadoColor: Colors.green,
                 ),
-                bgColor: Colors.pink,
-                boxShadoColor: Colors.green,
               ),
             ),
           ],
         ),
-        GameList(
-          title: 'Free Fire',
-          img: Image.asset(
-            'assets/images/avater/fire.png',
-            height: 500,
+        GestureDetector(
+          onTap: () {
+            print('Clicked');
+            Provider.of<Data>(context, listen: false).gameName = 'Free Fire';
+            Provider.of<Data>(context, listen: false).coverPath =
+                'assets/images/cover/fire.jpg';
+            Navigator.pushNamed(context, Topup.id);
+          },
+          child: GameList(
+            title: 'Free Fire',
+            img: Image.asset(
+              'assets/images/avater/fire.png',
+              height: 500,
+            ),
+            bgColor: Colors.pink,
+            boxShadoColor: Colors.green,
           ),
-          bgColor: Colors.pink,
-          boxShadoColor: Colors.green,
         ),
       ],
     ));
