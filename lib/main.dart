@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData.dark(),
+        // darkTheme: ThemeData.dark(),
         initialRoute: SignInPage.id,
         routes: {
           SignInPage.id: (context) => SignInPage(),

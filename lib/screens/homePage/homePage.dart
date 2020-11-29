@@ -10,8 +10,8 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: ListView(
+    return Material(
+        child: ListView(
       physics: BouncingScrollPhysics(),
       children: [
         Column(
