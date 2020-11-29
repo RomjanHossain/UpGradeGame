@@ -1,16 +1,79 @@
 import 'package:flutter/material.dart';
-//import 'package:upgradegame/profile/profile.dart';
-//import 'package:upgradegame/uc page/ucpurchase.dart';
-import 'package:upgradegame/topUpPgae/topUPPage.dart';
 
-class MyHomePage extends StatelessWidget {
+import 'package:upgradegame/widgets/homepage/gameList.dart';
+
+class MyHomePage extends StatefulWidget {
+  static const String id = 'myhomepage';
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Topup()));
-      }),
-    );
+        body: ListView(
+      physics: BouncingScrollPhysics(),
+      children: [
+        Column(
+          children: [
+            FlutterLogo(
+              style: FlutterLogoStyle.horizontal,
+              size: 200,
+            ),
+            Center(
+              child: Text(
+                'Choose your \nAwesome Game',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.black45,
+                  fontSize: 50,
+                ),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: GestureDetector(
+                onTap: () {
+                  print('Clicked');
+                },
+                child: GameList(
+                  title: 'Call Of Duty',
+                  img: Image.asset(
+                    'assets/images/avater/cod2.png',
+                    height: 500,
+                  ),
+                  bgColor: Colors.pink,
+                  boxShadoColor: Colors.green,
+                ),
+              ),
+            ),
+            Expanded(
+              child: GameList(
+                title: 'Pubg',
+                img: Image.asset(
+                  'assets/images/avater/pubg2.png',
+                  height: 500,
+                ),
+                bgColor: Colors.pink,
+                boxShadoColor: Colors.green,
+              ),
+            ),
+          ],
+        ),
+        GameList(
+          title: 'Free Fire',
+          img: Image.asset(
+            'assets/images/avater/fire.png',
+            height: 500,
+          ),
+          bgColor: Colors.pink,
+          boxShadoColor: Colors.green,
+        ),
+      ],
+    ));
   }
 }

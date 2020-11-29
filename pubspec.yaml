@@ -1,6 +1,6 @@
 name: upgradegame
 description: A new Flutter project.
-publish_to: "none" # Remove this line if you wish to publish to pub.dev
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
@@ -12,9 +12,10 @@ dependencies:
   gradient_text: ^1.0.2
   flutter:
     sdk: flutter
-
   cupertino_icons: ^1.0.0
   google_fonts: ^1.1.1
+  flutter_signin_button: ^1.1.0
+
 
 dev_dependencies:
   flutter_test:
@@ -25,7 +26,9 @@ flutter:
 
   assets:
     - lib/assets/
-
+    - assets/images/consts/
+    - assets/images/avater/
+  #   - images/a_dot_ham.jpeg
   # fonts:
   #   - family: Schyler
   #     fonts:
