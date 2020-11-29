@@ -8,20 +8,24 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  font_awesome_flutter: ^8.10.0
+  gradient_text: ^1.0.2
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.0
+  google_fonts: ^1.1.1
   flutter_signin_button: ^1.1.0
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter:
-
   uses-material-design: true
 
   assets:
+    - lib/assets/
     - assets/images/consts/
     - assets/images/avater/
   #   - images/a_dot_ham.jpeg
