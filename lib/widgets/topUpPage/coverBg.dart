@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:upgradegame/services/Provider/gameDataProvide.dart';
 
 class CoverBG extends StatelessWidget {
   @override
@@ -36,7 +38,8 @@ class CoverBG extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.4),
                 image: DecorationImage(
-                    image: AssetImage('assets/images/cover/cod.jpg')),
+                  image: AssetImage(Provider.of<Data>(context).coverPath),
+                ),
                 borderRadius: BorderRadius.all(
                   Radius.circular(22),
                 ),
