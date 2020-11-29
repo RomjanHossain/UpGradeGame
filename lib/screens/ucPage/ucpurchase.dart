@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../../models/UcPage/class-1.dart';
-import 'package:gradient_text/gradient_text.dart';
 
 class Ucpurchese extends StatefulWidget {
   @override
@@ -33,21 +31,7 @@ class _UcpurcheseState extends State<Ucpurchese> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GradientText("Purchese UC",
-                  gradient: LinearGradient(colors: [
-                    Color(0xffFFEFBA),
-                    Color(0xffeaafc8),
-                    //Colors.purple,
-                    //Colors.pink,
-                    //Colors.deepOrange,
-                    //Colors.purple
-                  ]),
-                  style: GoogleFonts.sriracha(
-                    textStyle: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 28.0,
-                    ),
-                  )),
+              Text('perch UC'),
             ],
           ),
           Expanded(
@@ -90,11 +74,9 @@ class _UcpurcheseState extends State<Ucpurchese> {
                         children: [
                           ListTile(
                             title: Center(
-                              child: Text(diamonds[index].amount,
-                                  style: GoogleFonts.rambla(
-                                    textStyle: TextStyle(
-                                        fontSize: 20, color: Color(0xffF4F4F6)),
-                                  )),
+                              child: Text(
+                                diamonds[index].amount,
+                              ),
                             ),
                             subtitle: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -104,12 +86,9 @@ class _UcpurcheseState extends State<Ucpurchese> {
                                   height: 40,
                                 ),
                                 Center(
-                                    child: Text(diamonds[index].price,
-                                        style: GoogleFonts.rambla(
-                                          textStyle: TextStyle(
-                                              fontSize: 15,
-                                              color: Color(0xffF4F4F6)),
-                                        ))),
+                                    child: Text(
+                                  diamonds[index].price,
+                                )),
                               ],
                             ),
                           ),

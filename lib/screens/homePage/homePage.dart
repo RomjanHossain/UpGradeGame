@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:upgradegame/screens/topUpPgae/topUPPage.dart';
+import 'package:upgradegame/screens/topUpPgae/topUpPage.dart';
 
 import 'package:upgradegame/widgets/homepage/gameList.dart';
 

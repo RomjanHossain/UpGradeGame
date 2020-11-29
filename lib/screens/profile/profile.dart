@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gradient_text/gradient_text.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Pofile extends StatefulWidget {
   Pofile({Key key}) : super(key: key);
@@ -34,21 +32,7 @@ class _PofileState extends State<Pofile> {
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(20.0, 60.0, 0.0, 0.0),
-              child: GradientText("My Profile",
-                  gradient: LinearGradient(colors: [
-                    Color(0xffFFEFBA),
-                    Color(0xffeaafc8),
-                    //Colors.purple,
-                    //Colors.pink,
-                    //Colors.deepOrange,
-                    //Colors.purple
-                  ]),
-                  style: GoogleFonts.sriracha(
-                    textStyle: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 28.0,
-                    ),
-                  )),
+              child: Text('MyProfile'),
             ),
             Container(
               width: double.infinity,
@@ -59,16 +43,14 @@ class _PofileState extends State<Pofile> {
                 children: [
                   CircleAvatar(
                     radius: 60,
-                    backgroundImage: AssetImage("lib/assets/pic-2.jpg"),
+                    backgroundImage: AssetImage("assets/images/pic-2.jpg"),
                   ),
                   SizedBox(
                     height: 20,
                   ),
-                  Text("Name",
-                      style: GoogleFonts.rambla(
-                          textStyle:
-                              TextStyle(fontSize: 22, color: Color(0xffF4F4F6)),
-                          letterSpacing: 1.5)),
+                  Text(
+                    "Name",
+                  ),
                   SizedBox(
                     height: 20,
                   ),
@@ -98,61 +80,43 @@ class _PofileState extends State<Pofile> {
                             Expanded(
                                 child: Column(
                               children: [
-                                Text("Coin",
-                                    style: GoogleFonts.rambla(
-                                        textStyle: TextStyle(
-                                            fontSize: 18,
-                                            color: Color(0xffF4F4F6)),
-                                        letterSpacing: 1.5)),
+                                Text(
+                                  "Coin",
+                                ),
                                 SizedBox(
                                   height: 6.0,
                                 ),
-                                Text("100",
-                                    style: GoogleFonts.rambla(
-                                        textStyle: TextStyle(
-                                            fontSize: 15,
-                                            color: Color(0xffF4F4F6)),
-                                        letterSpacing: 1.5)),
+                                Text(
+                                  "100",
+                                ),
                               ],
                             )),
                             Expanded(
                                 child: Column(
                               children: [
-                                Text("Coin",
-                                    style: GoogleFonts.rambla(
-                                        textStyle: TextStyle(
-                                            fontSize: 18,
-                                            color: Color(0xffF4F4F6)),
-                                        letterSpacing: 1.5)),
+                                Text(
+                                  "Coin",
+                                ),
                                 SizedBox(
                                   height: 6.0,
                                 ),
-                                Text("100",
-                                    style: GoogleFonts.rambla(
-                                        textStyle: TextStyle(
-                                            fontSize: 15,
-                                            color: Color(0xffF4F4F6)),
-                                        letterSpacing: 1.5)),
+                                Text(
+                                  "100",
+                                ),
                               ],
                             )),
                             Expanded(
                                 child: Column(
                               children: [
-                                Text("Coin",
-                                    style: GoogleFonts.rambla(
-                                        textStyle: TextStyle(
-                                            fontSize: 18,
-                                            color: Color(0xffF4F4F6)),
-                                        letterSpacing: 1.5)),
+                                Text(
+                                  "Coin",
+                                ),
                                 SizedBox(
                                   height: 6.0,
                                 ),
-                                Text("100",
-                                    style: GoogleFonts.rambla(
-                                        textStyle: TextStyle(
-                                            fontSize: 15,
-                                            color: Color(0xffF4F4F6)),
-                                        letterSpacing: 1.5)),
+                                Text(
+                                  "100",
+                                ),
                               ],
                             )),
                           ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:upgradegame/screens/homePage/homePage.dart';
 import 'package:upgradegame/screens/initPage/signInPage.dart';
-import 'package:upgradegame/screens/topUpPgae/topUPPage.dart';
+import 'package:upgradegame/screens/topUpPgae/topUpPage.dart';
 
 void main() => runApp(MyApp());
 

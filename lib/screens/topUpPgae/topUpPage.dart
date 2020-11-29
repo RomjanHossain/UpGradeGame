@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gradient_text/gradient_text.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../../models/topUpPageModels/topMod.dart';
 
 class Topup extends StatefulWidget {
@@ -35,21 +33,7 @@ class _TopupState extends State<Topup> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GradientText("Top Up",
-                  gradient: LinearGradient(colors: [
-                    Color(0xffFFEFBA),
-                    Color(0xffeaafc8),
-                    // Colors.purple,
-                    //Colors.pink,
-                    //Colors.deepOrange,
-                    //Colors.purple
-                  ]),
-                  style: GoogleFonts.sriracha(
-                    textStyle: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 28.0,
-                    ),
-                  )),
+              Text('Top Up'),
             ],
           ),
           Expanded(
@@ -93,11 +77,9 @@ class _TopupState extends State<Topup> {
                         children: [
                           ListTile(
                             title: Center(
-                              child: Text(diamonds[index].amount,
-                                  style: GoogleFonts.rambla(
-                                    textStyle: TextStyle(
-                                        fontSize: 22, color: Color(0xffF4F4F6)),
-                                  )),
+                              child: Text(
+                                diamonds[index].amount,
+                              ),
                             ),
                             subtitle: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -107,12 +89,9 @@ class _TopupState extends State<Topup> {
                                   height: 40,
                                 ),
                                 Center(
-                                    child: Text(diamonds[index].price,
-                                        style: GoogleFonts.rambla(
-                                          textStyle: TextStyle(
-                                              fontSize: 15,
-                                              color: Color(0xffF4F4F6)),
-                                        ))),
+                                    child: Text(
+                                  diamonds[index].price,
+                                )),
                               ],
                             ),
                           ),
