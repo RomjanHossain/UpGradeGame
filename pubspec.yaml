@@ -23,6 +23,7 @@ flutter:
   assets:
     - assets/images/consts/
     - assets/images/avater/
+    - assets/images/cover/
     - assets/images/
   #   - images/a_dot_ham.jpeg
   # fonts:
