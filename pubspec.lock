@@ -104,7 +104,6 @@ packages:
     version: "0.0.0"
   font_awesome_flutter:
     dependency: transitive
-
     description:
       name: font_awesome_flutter
       url: "https://pub.dartlang.org"

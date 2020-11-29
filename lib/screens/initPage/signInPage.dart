@@ -11,7 +11,10 @@ class SignInPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          FlutterLogo(),
+          FlutterLogo(
+            style: FlutterLogoStyle.horizontal,
+            size: 300,
+          ),
           Center(child: Text('Welcome')),
           SignInButton(
             Buttons.GoogleDark,
