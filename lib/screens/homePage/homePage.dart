@@ -3,13 +3,9 @@ import 'package:upgradegame/screens/topUpPgae/topUpPage.dart';
 
 import 'package:upgradegame/widgets/homepage/gameList.dart';
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatelessWidget {
   static const String id = 'myhomepage';
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
 
-class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
